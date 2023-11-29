@@ -37,14 +37,13 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, useSlots } from "vue";
+import { computed, useSlots } from "vue";
 import type { UaFieldAddition } from "@/components/form/types/form-input";
 import FieldAddition from "@/components/form/addition/FieldAddition.vue";
 
 const slots = useSlots();
 
 interface Props {
-	slots: any
   prefix?: UaFieldAddition
 	suffix?: UaFieldAddition
 	value?: string
@@ -60,10 +59,6 @@ const props = withDefaults(defineProps<Props>(), {
 
 const onlyIcon = computed(() =>
 	props.circle && !props.value && !slots.default && (!props.prefix || !props.suffix));
-
-onMounted(() => {
-	console.log(slots);
-})
 </script>
 
 <style lang="scss">
