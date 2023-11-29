@@ -1,0 +1,46 @@
+.ua-form-input {
+  label {
+
+  }
+
+  &__input-wrapper {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__prepend {
+    margin-right: .5rem;
+    font-size: 1rem;
+  }
+
+  &__append {
+    margin-left: .5rem;
+    font-size: 1rem;
+  }
+
+  &__suffix {
+    margin-left: .5rem;
+    font-size: 1rem;
+  }
+
+  &__prefix {
+    margin-right: .5rem;
+    font-size: 1rem;
+  }
+
+  &__text-field {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: .5rem 1rem;
+    border: 1px solid $ua-input-border;
+    border-radius: .25rem;
+
+    input {
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+  }
+}
