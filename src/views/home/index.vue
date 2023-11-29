@@ -6,6 +6,8 @@
 
     <p>Поки що тут порожньо (ну майже), але надіюсь вже скоро (якщо я не здуюсь) тут появиться багато компонентів які ти будеш юзати в своїх проектах.</p>
 
+    <h3><span>Женя, якщо ти читаєш це... </span></h3>
+
     <h2 class="p-home__sub-heading">Моя мета:</h2>
 
     <ul>
@@ -51,6 +53,41 @@
 
 <style lang="scss">
 .p-home {
+  h3 {
+    text-align: right;
+    position: relative;
+    cursor: pointer;
+
+    span {
+      transform-origin: center right;
+      display: block;
+      transition: all .2s;
+    }
+
+    &::before {
+      content: 'КРАСАВЧИК!!!';
+      color: red;
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0;
+      transform: scale(.5);
+      transform-origin: right center;
+      transition: all .7s;
+    }
+
+    &:hover {
+      span {
+        transform: translateX(-150px) scale(.5);
+      }
+
+      &::before {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+
   &__heading {
     margin-bottom: 3rem;
   }
