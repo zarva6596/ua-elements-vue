@@ -9,7 +9,6 @@
 import UaForm from "@/components/form/UaForm.vue";
 import type { FormSchemaItem } from '@/components/form/types';
 import { FieldAdditionTypes } from '@/components/form/types/form-input';
-import Layout from "@/preview/components/general/Layout.vue";
 
 const schema: FormSchemaItem[] = [
   {
@@ -100,7 +99,7 @@ const schema: FormSchemaItem[] = [
   }
 ];
 
-const onSubmit = (val: Record<string, string>) => {
+const onSubmit = (val: Record<string, string | undefined>): void => {
   console.log(val)
 }
 </script>

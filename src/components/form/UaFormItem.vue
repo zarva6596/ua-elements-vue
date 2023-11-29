@@ -1,14 +1,12 @@
 <template>
   <div
     :class="item.class"
-    v-bind="item.attr"
   >
     <template v-if="item?.children">
       <div
         v-for="(child, j) in item.children"
         :key="j"
         :class="child.class"
-        v-bind="item.attr"
       >
         <ua-form-item
           v-if="child.element === FormElements.element"
