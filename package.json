@@ -1,7 +1,12 @@
 {
   "name": "ua-elements-vue",
   "private": false,
-  "version": "0.0.24",
+  "version": "0.0.25",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zarva6596/ua-elements-vue.git"
+  },
+  "homepage": "https://ua-elements-vue.vercel.app/",
   "type": "module",
   "files": [
     "dist"

@@ -6,7 +6,7 @@
 
 <style lang="scss">
 .p-layout {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem 1rem;
   max-width: 1440px;
   margin: 0 auto;
 }

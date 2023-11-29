@@ -1,11 +1,11 @@
 <template>
   <header class="p-header">
     <div class="p-header__wrapper">
-      <div class="p-header__logo">
+      <RouterLink to="/" class="p-header__logo">
         <img src="/src/preview/assets/images/favicon.svg" alt="Ua Elements Vue Logo">
 
         <span>Ua Elements Vue</span>
-      </div>
+      </RouterLink>
 
       <div class="p-header__links">
         <RouterLink
@@ -28,6 +28,10 @@ import { RouterLink } from "vue-router";
 
 const routes = [
   {
+    route: '/',
+    name: 'Home'
+  },
+  {
     route: '/forms',
     name: 'Forms'
   },
@@ -40,18 +44,26 @@ const routes = [
 
 <style lang="scss">
 .p-header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
   padding: 1rem 2rem;
   box-shadow: 0 0 5px 1px rgba(0,0,0,0.25);
 
   &__logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
 
     img {
       height: 2rem;
       width: 2rem;
       object-fit: contain;
       margin-right: .5rem;
+    }
+
+    span {
+      color: #000;
     }
   }
 
