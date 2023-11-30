@@ -1,6 +1,7 @@
 <template>
   <button
     class="ua-button"
+    :type="type"
     :class="[
 			buttonClas,
       {
@@ -36,30 +37,31 @@
 import { computed, useSlots } from "vue";
 import type { UaFieldAddition } from "@/components/form/types/form-input";
 import FieldAddition from "@/components/form/addition/FieldAddition.vue";
-import { BUTTON_TYPES } from "@/components/button/types";
-import { COLOR_TYPES_COLOR } from "@/components/types";
+import { COLOR_TYPES, COLOR_TYPES_COLOR } from "@/components/types";
 
 const slots = useSlots();
 
 interface Props {
+  type?: 'button' | 'reset' | 'submit'
   prefix?: UaFieldAddition;
   suffix?: UaFieldAddition;
   value?: string;
-  type?: (typeof BUTTON_TYPES)[keyof typeof BUTTON_TYPES] | '';
+  styleType?: (typeof COLOR_TYPES)[keyof typeof COLOR_TYPES] | '';
   circle?: boolean;
   plain?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  type: "",
-  value: "",
+  type: 'button',
+  styleType: '',
+  value: '',
   circle: false,
   plain: false,
 });
 
 const buttonClas = computed<string>(() => {
-	if (props.type) {
-		const color = COLOR_TYPES_COLOR[props.type];
+	if (props.styleType) {
+		const color = COLOR_TYPES_COLOR[props.styleType];
 		return props.plain
 			? `ua-b-${color} ua-bg-white ua-text-${color}`
 			: `ua-bg-${color} ua-b-${color} ua-text-white`

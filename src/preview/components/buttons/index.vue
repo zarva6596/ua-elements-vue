@@ -10,7 +10,8 @@
             type: 'ICON',
             value: 'lab la-researchgate'
           }"
-        type="danger"
+        style-type="danger"
+        type="submit"
         plain
       >
         Button
