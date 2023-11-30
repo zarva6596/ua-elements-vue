@@ -32,12 +32,12 @@ const routes = [
     name: 'Home'
   },
   {
-    route: '/forms',
-    name: 'Forms'
+    route: '/style-classes',
+    name: 'Style Classes'
   },
   {
-    route: '/buttons',
-    name: 'Buttons'
+    route: '/components',
+    name: 'Components'
   },
 ]
 </script>

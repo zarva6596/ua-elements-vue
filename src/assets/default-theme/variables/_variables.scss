@@ -1,0 +1,96 @@
+@use "sass:map";
+
+$ua-input-border: #757012;
+
+// colors
+
+$white: (
+  "500": #fff,
+);
+$black: (
+  "500": #000
+);
+
+$blue: (
+  "500": #5B9BFF,
+  "400": #93BDFF,
+  "300": #BED7FF,
+  "200": #D3E4FF,
+  "100": #F1F7FF
+);
+$blue-500: map.get($blue, "500");
+$blue-400: map.get($blue, "400");
+$blue-300: map.get($blue, "300");
+$blue-200: map.get($blue, "200");
+$blue-100: map.get($blue, "100");
+
+$green: (
+  "500": #78BF37,
+  "400": #A9E771,
+  "300": #B7E48D,
+  "200": #D4F2B8,
+  "100": #ECFFDA
+);
+$green-500: map.get($green, "500");
+$green-400: map.get($green, "400");
+$green-300: map.get($green, "300");
+$green-200: map.get($green, "200");
+$green-100: map.get($green, "100");
+
+$grey: (
+  "500": #919399,
+  "400": #AFB1B8,
+  "300": #C4C6CC,
+  "200": #DBDEE8,
+  "100": #EAEEF8
+);
+$grey-500: map.get($grey, "500");
+$grey-400: map.get($grey, "400");
+$grey-300: map.get($grey, "300");
+$grey-200: map.get($grey, "200");
+$grey-100: map.get($grey, "100");
+
+$gold: (
+  "500": #DDA53F,
+  "400": #FFCC6E,
+  "300": #FFD994,
+  "200": #FFE8BE,
+  "100": #FFF4E1
+);
+$gold-500: map.get($gold, "500");
+$gold-400: map.get($gold, "400");
+$gold-300: map.get($gold, "300");
+$gold-200: map.get($gold, "200");
+$gold-100: map.get($gold, "100");
+
+$red: (
+  "500": #E6756F,
+  "400": #FF928D,
+  "300": #FFABA6,
+  "200": #FFBFBC,
+  "100": #FFDBDA
+);
+$red-500: map.get($red, "500");
+$red-400: map.get($red, "400");
+$red-300: map.get($red, "300");
+$red-200: map.get($red, "200");
+$red-100: map.get($red, "100");
+
+// other
+
+$duration: .5s;
+
+// border, text, background color classes
+
+@import "../mixins/_mixins";
+
+// end border, text, background color classes
+
+
+$white: map.get($white, "500");
+$black: map.get($black, "500");
+$blue: map.get($blue, "500");
+$green: map.get($green, "500");
+$grey: map.get($grey, "500");
+$gold: map.get($gold, "500");
+$red: map.get($red, "500");

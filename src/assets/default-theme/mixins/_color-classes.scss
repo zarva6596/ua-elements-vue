@@ -1,0 +1,21 @@
+@use "sass:map";
+
+$color-variables: (blue: $blue, green: $green, grey: $grey, gold: $gold, red: $red, white: $white, black: $black);
+$color-styles: (bg: "background-color", text: "color", b: "border-color");
+$color-range: 500, 100, 200, 300, 400, 500;
+
+@each $style-key, $style-value in $color-styles {
+  .ua-#{$style-key} {
+    @each $color-key, $color-value in $color-variables {
+      &-#{$color-key} {
+        #{$style-value}: map.get($color-value, "500");
+
+        @each $i in $color-range {
+          &-#{$i} {
+            #{$style-value}: map.get($color-value, #{$i});
+          }
+        }
+      }
+    }
+  }
+}

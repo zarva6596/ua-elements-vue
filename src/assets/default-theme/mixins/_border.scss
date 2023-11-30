@@ -1,0 +1,64 @@
+$border-styles: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset;
+$border-directions: (t: top, r: right, b: bottom, l: left);
+
+@mixin set-border-dir-style ($dir, $style) {
+  @if ($dir) {
+    @if ($style) {
+      border-#{$dir}-style: $style;
+    } @else {
+      border-#{$dir}-style: solid;
+    }
+  } @else {
+    @if ($style) {
+      border-style: $style;
+    } @else {
+      border-style: solid;
+    }
+  }
+}
+
+@mixin set-border-style($dir) {
+  @include set-border-dir-style($dir, false);
+
+  @each $style in $border-styles {
+    &.ua-b-#{$style} {
+      @if ($dir) {
+        border-#{$dir}-style: $style;
+        @include set-border-dir-style($dir, $style);
+      } @else {
+        border-style: $style;
+        @include set-border-dir-style(false, $style);
+      }
+    }
+  }
+}
+
+@mixin set-border-width($dir) {
+  @for $i from 1 through 10 {
+    &-#{$i} {
+      @if $dir {
+        border-#{$dir}-width: #{$i}px;
+        @include set-border-style($dir);
+      } @else {
+        border-width: #{$i}px;
+        @include set-border-style(false);
+      }
+    }
+  }
+}
+
+.ua-b {
+  border-width: 1px;
+  border-style: solid;
+
+  @include set-border-width(false);
+  @include set-border-style(false);
+
+  @each $dir-key, $dir-value in $border-directions {
+    &-#{$dir-key} {
+      border-#{$dir-value}-width: 1px;
+      @include set-border-width($dir-value);
+      @include set-border-style($dir-value);
+    }
+  }
+}

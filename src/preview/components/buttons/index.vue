@@ -1,5 +1,5 @@
 <template>
-  <div class="buttons">
+  <div class="buttons ua-b-r-10 ua-b-b ua-b-dashed ua-b-red">
     <div class="buttons__item">
       <ua-button
         :prefix="{
@@ -10,6 +10,8 @@
             type: 'ICON',
             value: 'lab la-researchgate'
           }"
+        type="danger"
+        plain
       >
         Button
       </ua-button>
@@ -48,7 +50,7 @@ import UaButton from "@/components/button/UaButton.vue";
 </script>
 
 <style lang="scss">
-@import "src/assets/default-theme/variables";
+@import "@/assets/default-theme/variables/variables";
 
 .buttons {
   padding: 20px;

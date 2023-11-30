@@ -1,0 +1,50 @@
+.ua-button {
+  border-width: 1px;
+  border-style: solid;
+  color: $white;
+
+  font-size: 1rem;
+  font-weight: 400;
+
+  border-radius: 8px;
+  padding: .625rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: all $duration;
+
+  &.circle {
+    border-radius: 1000px;
+  }
+
+  &.onlyIcon {
+    padding: .625rem;
+  }
+
+  &__default {
+    margin: 0 .5rem;
+
+    &.notPrefix {
+      margin: 0 .5rem 0 0;
+    }
+
+    &.notSuffix {
+      margin: 0 0 0 .5rem;
+    }
+
+    &.notPrefix.notSuffix {
+      margin: 0;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: .85;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
