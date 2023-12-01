@@ -1,5 +1,5 @@
 <template>
-  <header class="p-header">
+  <header class="p-header ua-bg-white">
     <div class="p-header__wrapper">
       <RouterLink to="/" class="p-header__logo">
         <img src="/src/preview/assets/images/favicon.svg" alt="Ua Elements Vue Logo">
@@ -43,6 +43,8 @@ const routes = [
 </script>
 
 <style lang="scss">
+@import "@/assets/default-theme/default-theme";
+
 .p-header {
   position: fixed;
   top: 0;
